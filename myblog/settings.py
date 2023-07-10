@@ -124,7 +124,7 @@ STATICFILES_DIRS= [
     
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://articleweb-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://articleweb-production.up.railway.app','https://www.djangohelptutorial.online']
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
