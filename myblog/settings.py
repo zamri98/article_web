@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-lx47ahth%3h5dquv0uw))rjw)nf2zhg3w^$@se1w(=ivyb#q5e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -76,9 +76,13 @@ WSGI_APPLICATION = "myblog.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'M1KukXzdsMnvImYRY0iQ',
+        'HOST': 'containers-us-west-91.railway.app',
+        'PORT': '7329',
     }
 }
 
