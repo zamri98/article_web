@@ -1,0 +1,28 @@
+{% extends 'base.html'  %} 
+{% load static %} 
+{% block content %}
+
+
+<h1>My Objects</h1>
+
+<div class="mt-5">
+
+    {% for obj in objects %}
+
+        <div class="mt-3">
+
+            <a href="{% url 'article' obj.id %}">{{ obj }}<a>
+
+        </div>
+        
+    {% endfor %}
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}
