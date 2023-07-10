@@ -32,9 +32,9 @@ def signin(request):
             ### we need for use for futher used of user id
             user_id = user.id
             request.session['user_id'] = user_id
-            return redirect('write')
+            return render(request,"write.html",{})
         else:
-            return redirect('signin')
+            return render(request,"signin.html",{})
         
     else:
         return render(request,"signin.html",{})
