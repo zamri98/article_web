@@ -32,7 +32,7 @@ def signin(request):
             ### we need for use for futher used of user id
             user_id = user.id
             request.session['user_id'] = user_id
-            return render(request,"write.html",{})
+            return redirect("staff_view")
         else:
             return render(request,"signin.html",{})
         
@@ -95,3 +95,19 @@ def article_view(request,pk):
     
     
     return render(request,"articleview.html",{"obj":obj})
+
+@login_required(login_url="signin")
+def staff_views(request):
+    
+    objects=Article.objects.all()
+    
+    return render(request,"adminview.html",{"objects":objects})
+
+
+@login_required(login_url="signin")
+def article_setting(request,pk):
+    
+    obj = Article.objects.get(id=pk)
+    
+    return render(request,"articlesetting.html",{"obj":obj})
+    

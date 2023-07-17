@@ -12,6 +12,8 @@ class ArticleForm(forms.ModelForm):
         fields=["title","text"]
         
 
+'''
+
 class ImageForm(forms.ModelForm):
     
     
@@ -20,5 +22,10 @@ class ImageForm(forms.ModelForm):
             model=ImageUpload
             
             fields=["image","caption"]
+
+
+
+'''
+
             
     

@@ -15,11 +15,16 @@ class Article(models.Model):
         return self.title
     
 
-class ImageUpload(models.Model):
-    
+class AddContent(models.Model):
     article=models.ForeignKey(Article,on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='images/')
+    text=models.TextField()
+    image = models.ImageField(upload_to='images/',null=True)
     caption= models.CharField(max_length=50)
+    
+    
+    
+
+
     
 
 
